@@ -1,0 +1,37 @@
+{
+	"parsingJobs": [
+		{
+		  "key": "paths",
+		  "title": "Paths",
+		  "regexPattern": "\\/[a-zA-Z0-9_\\-\\/.]{2,}"
+		},
+		{
+		  "key": "parameters",
+		  "title": "Parameters",
+		  "regexPattern": "\\/[^\\s\\n?]*\\?[a-zA-Z0-9_\\-]+=[^&\\s\\n]*(?:&[a-zA-Z0-9_\\-]+=[^&\\s\\n]*)*"
+		},
+		{
+		  "key": "urls",
+		  "title": "URLs",
+		  "regexPattern": "\\b(?:http|https|ftp):\\/\\/[a-zA-Z0-9\\-_]+(?:\\.[a-zA-Z0-9\\-_]+)+[a-zA-Z0-9.,@?^=%&:\\/~+#\\-_]*\\b"
+		},
+		{
+		  "key": "emails",
+		  "title": "Email Addresses",
+		  "regexPattern": "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b"
+		},
+		{
+		  "key": "ips",
+		  "title": "IP Addresses",
+		  "regexPattern": "\\b(?:[0-9]{1,3}\\.){3}[0-9]{1,3}\\b"
+		},
+		{
+		  "key": "sensitive",
+		  "title": "Sensitive words",
+		  "regexPattern": "(?:\\b(?:token|access_token|auth_token|Authorization|password|pass|credentials|creds|secret|SECRET|privateKey|PRIVATE_KEY|apiKey|API_KEY|api_key|user|login|username|credential)\\b\\s*(?:[:=]|=>)\\s*['\\\"][^\\s'\\\"]+['\\\"])"
+		}
+	],
+	"excludedExtensions": [".png", ".jpg", ".jpeg", ".gif", ".css", ".ttf", ".woff", ".woff2", ".svg", ".pdf"],
+	"unwantedOutExtensions": [".jpg", ".png", ".svg", ".mp4", ".woff", ".woff2", ".ttf", ".otf", ".css", ".html", ".mp3", ".mjs", ".webm", ".webp", ".ts"],
+	"unwantedStrings": ["twitter.com", "instagram.com", "tiktok.com", "google", "twitch.tv", "kick.com", "cloudflare.", "steamcommunity", "steampowered", "w3.org", "facebook.com", "discord.gg", "github.com", "akamai.", "mozilla"]
+  }
