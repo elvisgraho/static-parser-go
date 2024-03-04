@@ -1,8 +1,9 @@
 # static-parser-go
 
 static-parser-go is a simple app that parses web application files from a folder.  
+  
 You could for example use "Save All Resources" browser extension to download all website files and then
-parse the with this app.  
+parse them with this app.  
   
 It is a simple regex matching defined in config.json, but it also can fetch missing .js or .json files found in
 documents.
