@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-func FetchTSFile(path, baseURL string, rootDir string) {
+func FetchFile(path, baseURL string, rootDir string) {
 	// Concatenate rootDir with "_fetched" to create the path for the fetched directory
 	fetchedDirPath := filepath.Join(rootDir, "_fetched")
 
@@ -65,7 +65,7 @@ func FetchTSFile(path, baseURL string, rootDir string) {
 	//log.Printf("Successfully fetched and saved %s\n", filepath)
 }
 
-func FindTsToFetch(filesMap map[string]string, baseURL string, rootDir string) {
+func FindFilesToFetch(filesMap map[string]string, baseURL string, rootDir string) {
 	tsRegex := regexp.MustCompile(`(?:https?:\/\/)?[\w/.\-]+\.js(?:on)?`)
 
 	var foundPaths []string
@@ -109,14 +109,6 @@ func FindTsToFetch(filesMap map[string]string, baseURL string, rootDir string) {
 	}
 
 	for _, path := range filteredPaths {
-		FetchTSFile(path, baseURL, rootDir)
+		FetchFile(path, baseURL, rootDir)
 	}
-
-	// if _, exists := filesMap[match]; !exists {
-	// 	// The .ts file reference is not in filesMap, so fetch it
-	// 	//
-	// 	//log.Printf(match)
-	// } else {
-	// 	//log.Printf("Exists: %s\n", match)
-	// }
 }

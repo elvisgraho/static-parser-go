@@ -63,7 +63,7 @@ func main() {
 		if !strings.HasSuffix(fetchUrl, "/") {
 			fetchUrl += "/"
 		}
-		utils.FindTsToFetch(filesMap, fetchUrl, rootDir)
+		utils.FindFilesToFetch(filesMap, fetchUrl, rootDir)
 	} else {
 		matchesMap := utils.ProcessFilesMap(filesMap, config.ParsingJobs)
 
